@@ -1,0 +1,618 @@
+* {
+    box-sizing: border-box !important;
+}
+body {
+    -webkit-font-smoothing: auto;
+    -moz-osx-font-smoothing: auto;
+	line-height: 1.15;
+	font-family: $arial;
+	background-color: $black;
+	color: $white;
+	overflow-x: hidden;
+
+	@media screen and (max-width: $small) {
+		margin-bottom: 0px !important;
+	}
+}
+.browserupgrade {
+    width: 100%;
+    padding: 20px;
+    z-index: 100;
+    text-align: center;
+    margin-bottom: 0px;
+    position: fixed;
+    top: 0px;
+}
+.page-container {
+	overflow-x: hidden !important;
+}
+h1 {
+	font-family: $le-havre;
+	text-transform: uppercase;
+	font-size: 60px;
+	line-height: 71px;
+	color: $yellow;
+	text-align: center;
+	margin: 0px auto 40px;
+
+	@media screen and (max-width: $medium) {
+		line-height: unset;
+	}
+
+	@media screen and (max-width: $small) {
+		font-size: 48px;
+		line-height: 50px;
+	}
+	sup {
+		font-size: 24px;
+		top: -30px;
+
+		@media screen and (max-width: $medium) {
+			top: -20px;
+		}
+	}
+}
+h2 {
+	font-family: $le-havre;
+	font-size: 48px;
+	line-height: 72px;
+	letter-spacing: -1.68px;
+	text-transform: uppercase;
+	color: $yellow;
+
+	@media screen and (max-width: $medium) {
+		text-align: center;
+	}
+}
+h3 {
+	font-size: 24px;
+	line-height: 24px;
+	font-weight: bold;
+	letter-spacing: -1.33px;
+	color: $white;
+	margin-bottom: 35px;
+
+	@media screen and (max-width: $small) {
+		font-size: 18px;
+		line-height: 21px;
+		letter-spacing: -.5px;
+		margin-bottom: 25px;
+	}
+}
+p {
+	font-size: 17px;
+	line-height: 21px;
+	
+	@media screen and (max-width: $small) {
+		font-size: 14px;
+	}
+	&.lg-link-text {
+		font-size: 21px !important;
+		letter-spacing: -1.17px;
+		margin-top: 40px;
+
+		@media screen and (max-width: $small) {
+			font-size: 19px !important;
+			letter-spacing: -.5px;
+			margin-top: 30px;
+		}
+		a {
+			text-decoration: none;
+		}
+	}
+	a {
+		text-decoration: underline;
+	}
+}
+a {
+	color: $yellow;
+	font-weight: bold;
+	transition: .2s ease-in-out;
+
+	&:hover {
+		color: $white;
+	}
+	&:hover, &:focus {
+		text-decoration: none;
+		outline: none;
+	}
+}
+main {
+	@media screen and (max-width: $medium) {
+		margin-top: 104px;
+	}
+}
+.page-wrapper {
+	width: 90%;
+	max-width: 1150px;
+	margin: 0px auto;
+}
+.btn-yellow {
+	background-color: $yellow;
+	font-family: $arial;
+	font-size: 14px;
+	font-weight: bold;
+	letter-spacing: -.78px;
+	padding: 19px 44px;
+	border: none;
+	outline: none !important;
+	position: relative;
+	transition: .3s ease-in-out;
+
+	&:hover {
+		background-color: rgba($yellow, .8);
+
+		&:before {
+			border-right-color: rgba($yellow, .8);
+		}
+		&:after {
+			border-left-color: rgba($yellow, .8);
+		}
+	}
+	&:before {
+		content: '';
+		width: 0px; 
+		height: 0px; 
+		border-top: 27px solid transparent;
+		border-bottom: 27px solid transparent; 
+		border-right: 16px solid $yellow; 
+		position: absolute;
+		top: 0px;
+		left: -16px;
+		transition: .3s ease-in-out;
+	}
+	&:after {
+		content: '';
+		width: 0px; 
+		height: 0px; 
+		border-top: 27px solid transparent;
+		border-bottom: 27px solid transparent; 
+		border-left: 16px solid $yellow; 
+		position: absolute;
+		top: 0px;
+		right: -16px;
+		transition: .3s ease-in-out;
+	}
+}
+.btn-black {
+	background-color: $black;
+	font-family: $arial;
+	font-size: 14px;
+	font-weight: bold;
+	letter-spacing: -.78px;
+	padding: 19px 44px;
+	border: none;
+	outline: none !important;
+	position: relative;
+	transition: .3s ease-in-out;
+
+	&:hover {
+		color: $yellow;
+		background-color: rgba($black, .8);
+
+		&:before {
+			border-right-color: rgba($black, .8) !important;
+		}
+		&:after {
+			border-left-color: rgba($black, .8) !important;
+		}
+	}
+	&:before {
+		content: '';
+		width: 0px; 
+		height: 0px; 
+		border-top: 27px solid transparent;
+		border-bottom: 27px solid transparent; 
+		border-right: 16px solid $black; 
+		position: absolute;
+		top: 0px;
+		left: -16px;
+		transition: .3s ease-in-out;
+	}
+	&:after {
+		content: '';
+		width: 0px; 
+		height: 0px; 
+		border-top: 27px solid transparent;
+		border-bottom: 27px solid transparent; 
+		border-left: 16px solid $black; 
+		position: absolute;
+		top: 0px;
+		right: -16px;
+		transition: .3s ease-in-out;
+	}
+}
+.btn-transparent {
+	background-color: transparent;
+	font-family: $arial;
+	font-size: 14px;
+	font-weight: bold;
+	letter-spacing: -.78px;
+	color: $yellow;
+	padding: 17px 44px 21px;
+	height: 54px;
+	border-left: none;
+	border-right: none;
+	border-top: 2px solid $yellow;
+	border-bottom: 2px solid $yellow;
+	outline: none !important;
+	position: relative;
+	transition: .3s ease-in-out;
+
+	&:hover {
+		background-color: $yellow;
+		color: $black;
+
+		&:before, &:after {
+			background-image: url('../img/button-yellow-angle-hover.svg');
+		}
+	}
+	&:before {
+		content: '';
+		position: absolute;
+		top: -2px;
+		left: -17px;
+		width: 17px;
+		height: 54px;
+		background-image: url('../img/button-yellow-angle.svg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		transition: .3s ease-in-out;
+	}
+	&:after {
+		content: '';
+		position: absolute;
+		top: -2px;
+		right: -17px;
+		width: 17px;
+		height: 54px;
+		background-image: url('../img/button-yellow-angle.svg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		transform: scale(-1);
+		transition: .3s ease-in-out;
+	}
+}
+.btn-transparent-alt {
+	display: inline-block;
+	background-color: transparent;
+	font-family: $arial;
+	font-size: 14px;
+	font-weight: bold;
+	letter-spacing: -.78px;
+	color: $black;
+	padding: 17px 44px 21px;
+	height: 54px;
+	border-left: none;
+	border-right: none;
+	border-top: 2px solid $black;
+	border-bottom: 2px solid $black;
+	outline: none !important;
+	position: relative;
+	transition: .3s ease-in-out;
+
+	&:hover {
+		background-color: $black;
+		color: $yellow;
+
+		&:before, &:after {
+			background-image: url('../img/button-black-angle-hover.svg');
+		}
+	}
+	&:before {
+		content: '';
+		position: absolute;
+		top: -2px;
+		left: -17px;
+		width: 17px;
+		height: 54px;
+		background-image: url('../img/button-black-angle.svg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		transition: .3s ease-in-out;
+	}
+	&:after {
+		content: '';
+		position: absolute;
+		top: -2px;
+		right: -17px;
+		width: 17px;
+		height: 54px;
+		background-image: url('../img/button-black-angle.svg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		transform: scale(-1);
+		transition: .3s ease-in-out;
+	}
+}
+.bubbly-button-black {
+	position: relative;
+	display: block;
+
+	&:before, &:after {
+		position: absolute;
+		content: '';
+		display: block;
+		width: 140%;
+		height: 100%;
+		left: -20%;
+		transition: all ease-in-out 0.5s;
+		background-repeat: no-repeat;
+	}
+	&:before {
+		display: none;
+		top: -75%;
+		background-image:  
+		radial-gradient(circle, $black 20%, transparent 20%),
+		radial-gradient(circle, transparent 20%, $black 20%, transparent 30%),
+		radial-gradient(circle, $black 20%, transparent 20%), 
+		radial-gradient(circle, $black 20%, transparent 20%),
+		radial-gradient(circle, transparent 10%, $black 15%, transparent 20%),
+		radial-gradient(circle, $black 20%, transparent 20%),
+		radial-gradient(circle, $black 20%, transparent 20%),
+		radial-gradient(circle, $black 20%, transparent 20%),
+		radial-gradient(circle, $black 20%, transparent 20%);
+	  	background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+	}
+	&:after {
+		display: none;
+		bottom: -75%;
+		background-image:  
+		radial-gradient(circle, $black 20%, transparent 20%), 
+		radial-gradient(circle, $black 20%, transparent 20%),
+		radial-gradient(circle, transparent 10%, $black 15%, transparent 20%),
+		radial-gradient(circle, $black 20%, transparent 20%),
+		radial-gradient(circle, $black 20%, transparent 20%),
+		radial-gradient(circle, $black 20%, transparent 20%),
+		radial-gradient(circle, $black 20%, transparent 20%);
+	  	background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+	}
+	&.animate {
+		&:before {
+			display: block;
+			animation: topBubbles ease-in-out 0.75s forwards;
+		}
+		&:after {
+			display: block;
+			animation: bottomBubbles ease-in-out 0.75s forwards;
+		}
+	}
+}
+@keyframes topBubbles {
+	0% {
+	  	background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+	}
+	50% {
+		background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 90% 30%;}
+	100% {
+	  	background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%, 50% 40%, 65% 10%, 90% 20%;
+		background-size: 0% 0%, 0% 0%,  0% 0%,  0% 0%,  0% 0%,  0% 0%;
+	}
+}
+@keyframes bottomBubbles {
+	0% {
+	  	background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%, 70% -10%, 70% 0%;
+	}
+	50% {
+		  background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%, 105% 0%;
+	}
+   	100% {
+	  	background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
+		background-size: 0% 0%, 0% 0%,  0% 0%,  0% 0%,  0% 0%,  0% 0%;
+	}
+}
+.modal-backdrop {
+	z-index: 100000;
+}
+.modal {
+	z-index: 100001;
+}
+.terms-page {
+	.page-wrapper {
+		margin-top: 200px;
+		margin-bottom: 70px;
+
+		@media screen and (max-width: $medium) {
+			margin-top: 160px;
+			margin-bottom: 50px;
+		}
+		@media screen and (max-width: $small) {
+			margin-bottom: 0px;
+		}
+		h1 {
+			margin-bottom: 70px;
+
+			@media screen and (max-width: $medium) {
+				margin-bottom: 50px;
+			}
+			@media screen and (max-width: $medium) {
+				margin-bottom: 40px;
+			}
+		}
+		h2 {
+			color: $white;
+			text-align: center;
+			font-size: 40px;
+			line-height: 50px;
+			letter-spacing: 0px;
+			margin-bottom: 30px;
+
+			@media screen and (max-width: $small) {
+				font-size: 30px;
+				line-height: 40px;
+			}
+			br {
+				@media screen and (max-width: $medium) {
+					display: none;
+				}
+			}
+		}
+		h3 {
+			text-align: center;
+			margin-bottom: 70px;
+
+			@media screen and (max-width: $small) {
+				margin-bottom: 50px;
+			}
+		}
+		p, li {
+			line-height: 1.5;
+		}
+		ul, ol {
+			@media screen and (max-width: $medium) {
+				padding-left: 20px;
+			}
+			li {
+				margin-bottom: 20px;
+			}
+		}
+	}
+	.visit-instagram-marquee, .instagram-marquee {
+		display: none;
+	}
+}
+.ie-indicator-show {
+	z-index: 99999999;
+	background-color: $yellow;
+	width: 100%;
+	height: 100vh;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	overflow-x: hidden;
+	overflow-y: hidden;
+
+	@media screen and (max-height: 600px) {
+		padding: 50px 35px 0px;
+		overflow-y: auto;
+	}
+}
+.ie-indicator {
+	z-index: 99999999;
+	background-color: $yellow;
+	width: 100%;
+	height: 100vh;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	display: none;
+
+	@media screen and (max-height: 600px) {
+		padding: 50px 35px 0px;
+		overflow-y: auto;
+	}
+}
+.ie-error-message-box {
+	background: white;
+	width: calc(100% - 70px);
+	max-width: 1270px;
+	height: auto;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	z-index: 100000;
+	transform: translate(-50%, -50%);
+	color: black;
+	text-align: center;
+	padding: 90px 5%;
+	margin-bottom: 50px;
+
+	@media screen and (max-width: 700px) {
+		padding: 50px 30px;
+	}
+	@media screen and (max-height: 600px) {
+		position: relative;
+		width: 100%;
+		top: 0px;
+		left: 0px;
+		transform: none;
+		margin: 0px auto 50px;
+	}
+	a {
+		display: block;
+		width: 100%;
+		max-width: 516px;
+		margin: 0px auto;
+
+		@media screen and (max-width: 700px) {
+			max-width: 250px;
+		}
+	}
+}
+.ie-messege-bee {
+	position: absolute;
+	top: -113px;
+	right: -82px;
+
+	@media screen and (max-width: $large) {
+		width: 150px;
+		top: -85px;
+		right: -65px;
+	}
+	@media screen and (max-width: 700px) {
+		width: 120px;
+		top: -68px;
+		right: -52px;
+	}
+}
+.ie-message-title {
+	font-family: $arial-black;
+	font-size: 55px;
+	text-transform: uppercase;
+
+	@media screen and (max-width: 700px) {
+		font-size: 32px;
+	}
+}
+.ie-message-subtitle {
+	font-family: $arial-black;
+	font-size: 38px;
+	text-transform: uppercase;
+	margin: 35px 0px;
+
+	@media screen and (max-width: 700px) {
+		font-size: 18px;
+		margin: 20px 0px 25px;
+	}
+	span {
+		position: relative;
+		display: inline-block;
+
+		&:after {
+			content: '';
+			display: block;
+			width: 100%;
+			height: 4px;
+			background-color: $yellow;
+			position: relative;
+			top: 2px;
+
+			@media screen and (max-width: 700px) {
+				height: 3px;
+			}
+		}
+	}
+}
+.ie-message-content {
+	font-size: 30px;
+	line-height: 42px;
+	width: 100%;
+	max-width: 770px;
+	margin: 0px auto 50px;
+
+	@media screen and (max-width: 700px) {
+		font-size: 16px;
+		line-height: 28px;
+		margin: 0px auto 30px;
+	}
+}
+.ie-message-browsers {
+	width: 100%;
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+	.ie-indicator {
+		display: block;
+	}
+ }

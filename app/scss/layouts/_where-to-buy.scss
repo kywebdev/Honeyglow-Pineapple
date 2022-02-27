@@ -1,0 +1,346 @@
+.wtb {
+	.hero {
+		background-color: $yellow;
+		padding: 200px 30px 12.500vw;
+
+		@media screen and (max-width: $medium) {
+			padding: 50px 30px 37.500vw;
+		}
+		@media screen and (max-width: $small) {
+			padding: 50px 30px 42.500vw;
+		}
+		h1 {
+			color: $black;
+			margin-bottom: 10px;
+
+			@media screen and (max-width: $small) {
+				margin-bottom: 15px;
+			}
+		}
+		.hero-text {
+			max-width: 700px;
+			margin: 0px auto 2.604vw;
+		
+			p {
+				color: $black;
+				text-align: center;
+				max-width: 860px;
+				margin: 0px auto;
+		
+				&.hero-heading {
+					font-weight: bold;
+					font-size: 18px;
+					letter-spacing: -1px;
+					margin-bottom: 25px;
+				}
+			}
+		}
+		.wtb-search {
+			margin-top: 30px;
+			padding: 17px 0px 21px;
+			width: 182px;
+		}
+	}
+	.wtb-locations {
+		display: flex;
+		flex-wrap: wrap;
+		max-width: 91.875vw;
+		margin: -7.292vw auto 0px;
+
+		@media screen and (max-width: $medium) {
+			margin: -28vw auto 0px;
+		}
+		.hex {
+			width: 14.479vw;
+			height: 8.333vw;
+			margin: 0px 0.417vw 4.896vw;
+			background-color: $yellow;
+			position: relative;
+			transition: .3s ease-in-out;
+
+			@media screen and (max-width: $medium) {
+				width: 22.1vw;
+				height: 12vw;
+				margin: 0px 0.417vw 6.896vw;
+			}
+			&:hover {
+				background-color: $white;
+
+				&:before {
+					border-bottom-color: $white;
+				}
+				&:after {
+					border-top-color: $white;
+				}
+				&:nth-of-type(1), &:nth-of-type(2), &:nth-of-type(3), &:nth-of-type(4), &:nth-of-type(5) {
+					background-color: $yellow;
+
+					&:before {
+						border-bottom-color: $yellow;
+					}
+					&:after {
+						border-top-color: $yellow;
+					}
+					.inner-hex {
+						background-color: #333333;
+	
+						&:before {
+							border-bottom-color: #333333;
+						}
+						&:after {
+							border-top-color: #333333;
+						}
+					}
+				}
+				&:nth-of-type(6), &:nth-of-type(7) {
+					@media screen and (max-width: $medium) {
+						background-color: $yellow;
+						
+						&:hover {
+							.inner-hex {
+								background-color: #333333;
+	
+								&:before {
+									border-bottom-color: #333333;
+								}
+								&:after {
+									border-top-color: #333333;
+								}
+							}
+						}
+						&:before {
+							border-bottom-color: $yellow;
+						}
+						&:after {
+							border-top-color: $yellow;
+						}
+						.inner-hex {
+							background-color: transparent;
+		
+							&:before {
+								border-bottom-color: transparent;
+							}
+							&:after {
+								border-top-color: transparent;
+							}
+						}
+					}
+				}
+			}
+			&:before {
+				content: '';
+				width: 0px;
+				position: absolute;
+				top: -4.167vw;
+				left: 0px;
+				border-bottom: 4.18vw solid $yellow;
+				border-left: 7.240vw solid transparent;
+				border-right: 7.240vw solid transparent;
+				transition: .3s ease-in-out;
+
+				@media screen and (max-width: $medium) {
+					top: -6vw;
+					border-bottom: 6.1vw solid $yellow;
+					border-left: 11.100vw solid transparent;
+					border-right: 11.100vw solid transparent;
+				}
+			}
+			&:after {
+				content: '';
+				width: 0px;
+				position: absolute;
+				bottom: -4.167vw;
+				left: 0px;
+				border-top: 4.18vw solid $yellow;
+				border-left: 7.240vw solid transparent;
+				border-right: 7.240vw solid transparent;
+				transition: .3s ease-in-out;
+
+				@media screen and (max-width: $medium) {
+					bottom: -6vw;
+					border-top: 6.1vw solid $yellow;
+					border-left: 11.100vw solid transparent;
+					border-right: 11.100vw solid transparent;
+				}
+			}
+			&:nth-of-type(11n + 1) {
+				margin-left: 8.073vw;
+
+				@media screen and (max-width: $medium) {
+					margin-left: 0.417vw;
+				}
+			}
+			&:nth-of-type(7n + 1) {
+				@media screen and (max-width: $medium) {
+					margin-left: 11.873vw;
+				}
+			}
+			&:nth-of-type(1), &:nth-of-type(2), &:nth-of-type(3), &:nth-of-type(4), &:nth-of-type(5) {
+				.inner-hex {
+					background-color: $black;
+
+					&:before {
+						border-bottom-color: $black;
+					}
+					&:after {
+						border-top-color: $black;
+					}
+					.hex-img {
+						filter: brightness(0) invert(1);
+					}
+				}
+			}
+			&:nth-of-type(6), &:nth-of-type(7) {
+				.inner-hex {
+					@media screen and (max-width: $medium) {
+						background-color: $black;
+
+						&:before {
+							border-bottom-color: $black;
+						}
+						&:after {
+							border-top-color: $black;
+						}
+					}
+					.hex-img {
+						@media screen and (max-width: $medium) {
+							filter: brightness(0) invert(1);
+						}
+					}
+				}
+			}
+			&.empty-hex {
+				background-color: $black;
+				pointer-events: none;
+				
+				&:before {
+					border-bottom-color: $black;
+				}
+				&:after {
+					border-top-color: $black;
+				}
+			}
+			&.add-hex {
+				background-color: $black;
+
+				&:hover {
+					background-color: #333333;
+
+					&:before {
+						border-bottom-color: #333333;
+					}
+					&:after {
+						border-top-color: #333333;
+					}
+				}
+				&:before {
+					border-bottom-color: $black;
+				}
+				&:after {
+					border-top-color: $black;
+				}
+				.hex-img {
+					max-width: 2.500vw;
+
+					@media screen and (max-width: $medium) {
+						max-width: 5vw;
+					}
+					@media screen and (max-width: $small) {
+						max-width: 7vw;
+					}
+				}
+			}
+			.inner-hex {
+				width: 13.333vw;
+				height: 7.708vw;
+				background-color: transparent;
+				position: absolute;
+				z-index: 1;
+				left: 0.573vw;
+				top: 0.313vw;
+				transition: .3s ease-in-out;
+
+				@media screen and (max-width: $medium) {
+					width: 20.4vw;
+					height: 10.708vw;
+					left: 0.873vw;
+					top: 0.713vw;
+				}
+				&:before {
+					content: '';
+					width: 0px;
+					position: absolute;
+					top: -3.854vw;
+					left: 0px;
+					border-bottom: 3.87vw solid transparent;
+					border-left: 6.667vw solid transparent;
+					border-right: 6.667vw solid transparent;
+					transition: .3s ease-in-out;
+
+					@media screen and (max-width: $medium) {
+						top: -5.400vw;
+						border-bottom: 5.45vw solid transparent;
+						border-left: 10.200vw solid transparent;
+						border-right: 10.200vw solid transparent;
+					}
+				}
+				&:after {
+					content: '';
+					width: 0px;
+					position: absolute;
+					bottom: -3.854vw;
+					left: 0px;
+					border-top: 3.87vw solid transparent;
+					border-left: 6.667vw solid transparent;
+					border-right: 6.667vw solid transparent;
+					transition: .3s ease-in-out;
+
+					@media screen and (max-width: $medium) {
+						bottom: -5.400vw;
+						border-top: 5.45vw solid transparent;
+						border-left: 10.200vw solid transparent;
+						border-right: 10.200vw solid transparent;
+					}
+				}
+			}
+			.hex-img {
+				max-width: 8.750vw;
+				width: 100%;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+
+				@media screen and (max-width: $medium) {
+					max-width: 13vw;
+				}
+				@media screen and (max-width: $small) {
+					max-width: 16.8vw;
+				}
+				img {
+					width: 100%;
+				}
+			}
+		}
+	}
+	.wtb-map {
+		padding: 140px 80px 0px;
+
+		@media screen and (max-width: $medium) {
+			padding: 80px 60px 0px;
+		}
+		@media screen and (max-width: $small) {
+			padding: 70px 50px 0px;
+		}
+		img {
+			width: 100%;
+		}
+	}
+	.recipes-section {
+		padding: 100px 0px 40px;
+
+		@media screen and (max-width: $small) {
+			padding: 80px 0px 40px;
+		}
+	}
+}

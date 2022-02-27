@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="269px" height="309px" viewBox="0 0 269 309" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Polygon Copy 6</title>
+    <defs>
+        <polygon id="path-1" points="154.5 0 288.300925 77.25 288.300925 231.75 154.5 309 20.6990751 231.75 20.6990751 77.25"></polygon>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="recipes" transform="translate(-823.000000, -284.000000)">
+            <g id="center-polygon" transform="translate(803.000000, 284.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Polygon-Copy-6" fill="#FED103" xlink:href="#path-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,34 @@
+.contact {
+	.hero {
+		background-color: $yellow;
+		padding: 200px 0px 70px;
+
+		@media screen and (max-width: $medium) {
+			padding: 50px 0px;
+		}
+		h1 {
+			color: $black;
+
+			@media screen and (max-width: $medium) {
+				width: 90%;
+			}
+			@media screen and (max-width: $small) {
+				margin-bottom: 25px;
+			}
+		}
+	}
+	&-info {
+		padding: 100px 0px calc(100px - 1rem);
+
+		@media screen and (max-width: $small) {
+			padding: 60px 0 30px;
+		}
+		p {
+			letter-spacing: -.94px;
+
+			@media screen and (max-width: $small) {
+				font-size: 17px;
+			}
+		}
+	}
+}

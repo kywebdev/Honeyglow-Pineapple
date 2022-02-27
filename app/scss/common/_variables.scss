@@ -1,0 +1,50 @@
+// ----------------------  SITE COLORS  ----------------------
+
+$yellow: 		#FED103;
+$white:         #ffffff;
+$black: 		#000000;
+
+
+// ----------------------  TYPEFACES  ----------------------
+
+// google fonts or typekit import
+@import url("https://use.typekit.net/wse6bid.css");
+
+// webfonts
+@font-face {
+    font-family: 'Hogfish';
+    src: url('../fonts/HogfishDEMO.eot');
+    src: url('../fonts/HogfishDEMO.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/HogfishDEMO.woff2') format('woff2'),
+        url('../fonts/HogfishDEMO.woff') format('woff'),
+        url('../fonts/HogfishDEMO.ttf') format('truetype'),
+        url('../fonts/HogfishDEMO.svg#HogfishDEMO') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Arial Black';
+    src: url('../fonts/Arial-Black.eot');
+    src: url('../fonts/Arial-Black.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Arial-Black.woff2') format('woff2'),
+        url('../fonts/Arial-Black.woff') format('woff'),
+        url('../fonts/Arial-Black.ttf') format('truetype'),
+        url('../fonts/Arial-Black.svg#Arial-Black') format('svg');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+$le-havre:          'le-havre', Arial, Helvetica, sans-serif;
+$hogfish:         	'Hogfish', Arial, Helvetica, sans-serif;
+$arial:         	Arial, Helvetica, sans-serif;
+$arial-black:       'Arial Black', Arial, Helvetica, sans-serif;
+
+
+// ----------------------  BREAKPOINTS  ----------------------
+
+$x-large:   1500px;
+$large:     1200px;
+$medium:    1000px;
+$small:     650px;
